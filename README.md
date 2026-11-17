@@ -3,7 +3,7 @@
 A small 3D maintenance tool in the browser. A plant room with pumps, tanks, valves, a filter,
 a heat exchanger and a control panel. Click any piece of equipment to see when it needs service.
 
-**Live demo:** _add the Vercel link here_
+**Live demo:** https://plant-room-viewer.vercel.app
 
 ## What it does
 
