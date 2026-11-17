@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* The ID labels that float above the equipment in the 3D view. */
+.label-3d {
+  font: 600 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #e2e8f0;
+  background: rgb(15 23 42 / 0.8);
+  border: 1px solid rgb(148 163 184 / 0.35);
+  border-radius: 4px;
+  padding: 3px 5px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.label-3d.is-selected {
+  color: #0f172a;
+  background: #2dd4bf;
+  border-color: #2dd4bf;
+}

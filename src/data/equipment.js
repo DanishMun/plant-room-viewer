@@ -1,0 +1,106 @@
+// The equipment in the plant room.
+// In a real product this would come from an API and a database.
+// position = [x, z] on the floor, in metres. The room is 20 m × 14 m, centred on 0.
+
+export const equipment = [
+  {
+    id: "P-101",
+    name: "Feed pump A",
+    type: "pump",
+    position: [-6.5, -3],
+    maker: "Grundfos CR 32",
+    lastService: "2026-05-20",
+    intervalDays: 180,
+    note: "Main feed line. Check seal for leaks.",
+  },
+  {
+    id: "P-102",
+    name: "Feed pump B",
+    type: "pump",
+    position: [-6.5, 1],
+    maker: "Grundfos CR 32",
+    lastService: "2026-09-02",
+    intervalDays: 180,
+    note: "Standby pump. Runs when pump A is off.",
+  },
+  {
+    id: "F-601",
+    name: "Water filter",
+    type: "filter",
+    position: [-2.5, 4],
+    maker: "Eaton DCF-800",
+    lastService: "2026-10-28",
+    intervalDays: 30,
+    note: "Change the filter bag every month.",
+  },
+  {
+    id: "T-201",
+    name: "Buffer tank",
+    type: "tank",
+    position: [0, -3.5],
+    maker: "5 000 L steel tank",
+    lastService: "2026-02-10",
+    intervalDays: 365,
+    note: "Yearly inside inspection.",
+  },
+  {
+    id: "T-202",
+    name: "Hot water tank",
+    type: "tank",
+    position: [0.5, 2.5],
+    maker: "3 000 L steel tank",
+    lastService: "2025-10-01",
+    intervalDays: 365,
+    note: "Check the anode and pressure relief valve.",
+  },
+  {
+    id: "HX-301",
+    name: "Heat exchanger",
+    type: "exchanger",
+    position: [5.5, -3],
+    maker: "Alfa Laval T5",
+    lastService: "2026-07-15",
+    intervalDays: 365,
+    note: "Clean the plates if the outlet temperature drops.",
+  },
+  {
+    id: "V-401",
+    name: "Main valve",
+    type: "valve",
+    position: [-3.5, -3],
+    maker: "DN80 butterfly valve",
+    lastService: "2026-04-01",
+    intervalDays: 365,
+    note: "Turn fully open and closed once a year.",
+  },
+  {
+    id: "V-402",
+    name: "Bypass valve",
+    type: "valve",
+    position: [4.1, 2.5],
+    maker: "DN50 ball valve",
+    lastService: "2025-11-30",
+    intervalDays: 365,
+    note: "Only used during heat exchanger service.",
+  },
+  {
+    id: "CP-501",
+    name: "Control panel",
+    type: "panel",
+    position: [7.5, 4.5],
+    maker: "Siemens S7 cabinet",
+    lastService: "2026-08-12",
+    intervalDays: 365,
+    note: "Check alarms log and backup battery.",
+  },
+];
+
+// The pipes, as lines between points on the floor plan ([x, z]).
+// They are drawn at 1.4 m height.
+export const pipes = [
+  [[-6.5, -3], [-3.5, -3], [0, -3.5]],
+  [[-6.5, 1], [-6.5, -3]],
+  [[0, -3.5], [5.5, -3]],
+  [[5.5, -3], [5.5, 2.5], [4.1, 2.5], [0.5, 2.5]],
+  [[0.5, 2.5], [-2.5, 4]],
+];
